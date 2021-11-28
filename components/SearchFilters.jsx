@@ -45,7 +45,7 @@ export default function SearchFilters() {
   }, [searchTerm]);
 
   return (
-    <Flex bg='green.600' p='4' justifyContent='center' flexWrap='wrap'>
+    <Flex bg='#3963ed' p='4' justifyContent='center' flexWrap='wrap'>
       {filters?.map((filter) => (
         <Box key={filter.queryName}>
           <Select onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })} placeholder={filter.placeholder} w='fit-content' p='2' >
