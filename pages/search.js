@@ -18,7 +18,7 @@ const Search = ({ properties }) => {
       <Flex
         onClick={() => setSearchFilters(!searchFilters)}
         cursor='pointer'
-        bg='gray.100'
+        bg='gray.500'
         borderBottom='1px'
         borderColor='gray.200'
         p='2'
@@ -56,7 +56,7 @@ export async function getServerSideProps({ query }) {
   const bathsMin = query.bathsMin || '0';
   const sort = query.sort || 'price-desc';
   const areaMax = query.areaMax || '35000';
-  const locationExternalIDs = query.locationExternalIDs || '5002';
+  const locationExternalIDs = query.locationExternalIDs || '5002,6020';
   const categoryExternalID = query.categoryExternalID || '4';
 
   const data = await fetchApi(`${baseUrl}/properties/list?locationExternalIDs=${locationExternalIDs}&purpose=${purpose}&categoryExternalID=${categoryExternalID}&bathsMin=${bathsMin}&rentFrequency=${rentFrequency}&priceMin=${minPrice}&priceMax=${maxPrice}&roomsMin=${roomsMin}&sort=${sort}&areaMax=${areaMax}`);
