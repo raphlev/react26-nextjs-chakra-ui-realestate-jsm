@@ -14,7 +14,7 @@ const LeftArrow = () => {
         onClick={() => scrollPrev()}
         fontSize='2xl'
         cursor='pointer'
-        d={['none','none','none','block']}
+        display={['none','none','none','block']}
       />
     </Flex>
   );
@@ -30,7 +30,7 @@ const RightArrow = () => {
         onClick={() => scrollNext()}
         fontSize='2xl'
         cursor='pointer'
-        d={['none','none','none','block']}
+        display={['none','none','none','block']}
     />
     </Flex>
   );
